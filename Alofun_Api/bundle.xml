@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+	<name>ApiRA</name>
+	<version>1.0</version>
+	<class>com.vega.service.api.RestfulRA</class>
+	<type>ResourceAdaptor</type>
+</bundle>

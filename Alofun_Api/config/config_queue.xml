@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <category name="queue" >
+        <property name="queue_name" value="alome_queue_mo" />
+        <property name="total_consumers" value="7" />
+        <property name="prefetch_count" value="1" />
+        <property name="auto_ack" value="false" />
+        <property name="message_listener" value="com.vega.service.api.sms.RabbitListener" />
+    </category>
+</properties>

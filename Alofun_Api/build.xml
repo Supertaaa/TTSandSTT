@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project default="all" name="ApiBundle">
+    <target name="init">
+        <mkdir dir="classes"/>
+        <mkdir dir="dist"/>
+        <path id="path.compile">
+            <fileset dir="lib">
+                <include name="*.jar"/>
+            </fileset>
+        </path>
+        <property name="bundle.name" value="apiRA"/>
+        <property name="dir.deploy" value="E:\projects\Alome_Mobifone\Deploy\app"/>
+    </target>
+
+    <target depends="init" name="all">
+        <ant target="build-bundle-type"/>
+        <ant target="build-bundle"/>
+    </target>
+
+    <target depends="init" name="clean">
+        <ant target="clean-bundle-type"/>
+        <ant target="clean-bundle"/>
+        <delete dir="classes"/>
+        <delete dir="dist"/>
+    </target>
+
+    <target name="clean-bundle-type">
+        <delete file="dist/${bundle.name}-type.jar"/>
+        <delete dir="classes"/>
+    </target>
+
+    <target name="clean-bundle">
+        <delete file="dist/${bundle.name}.jar"/>
+        <delete file="dist/${bundle.name}-type.jar"/>
+    </target>
+
+    <target depends="init" name="compile">
+        <javac destdir="classes" debug="true"
+			includes="com/vega/service/api/**" srcdir="src">
+            <classpath>
+                <path refid="path.compile"/>
+            </classpath>
+        </javac>
+    </target>
+    <target depends="compile" name="build-bundle">
+        <jar destfile="dist/${bundle.name}-type.jar" basedir="classes" includes="com/vega/service/api/bundletype/**,com/vega/service/api/object/**"/>
+        <jar destfile="dist/${bundle.name}.jar" basedir="classes" includes="com/vega/service/api/**">
+            <fileset dir="./" includes="bundle.xml"/>
+        </jar>
+    </target>
+
+    <target depends="build-bundle" name="deploy">
+        <copy file="dist/${bundle.name}.jar" todir="${dir.deploy}/bundles"/>
+    </target>
+
+</project>

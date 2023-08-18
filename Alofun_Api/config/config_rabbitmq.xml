@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>	
+    <category name="rabbitmq">
+        <property name="url_broker" value="amqp://192.168.51.178:5672;amqp://192.168.51.176:5672;" />
+        <property name="timeout" value="5000" />
+        <property name="heartbeat" value="6" />
+    </category>
+</properties>

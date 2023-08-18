@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>Alofun_Api</name>
+        </general-data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/2">
+            <!-- Do not use Project Properties customizer when editing this file manually. -->
+            <name>Alofun_Api</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>VMS_Alome_Api_Wap</label>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>src</label>
+                    <type>java</type>
+                    <location>src</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>compile</target>
+                </action>
+                <action name="clean">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>clean</target>
+                </action>
+                <action name="rebuild">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>clean</target>
+                    <target>compile</target>
+                </action>
+                <action name="run.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>run-selected-file-in-src</target>
+                    <context>
+                        <property>run.class</property>
+                        <folder>src</folder>
+                        <pattern>\.java$</pattern>
+                        <format>java-name</format>
+                        <arity>
+                            <one-file-only/>
+                        </arity>
+                    </context>
+                </action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>src</label>
+                        <location>src</location>
+                    </source-folder>
+                    <source-file>
+                        <location>build.xml</location>
+                    </source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
+                </context-menu>
+            </view>
+            <subprojects/>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/3">
+            <compilation-unit>
+                <package-root>src</package-root>
+                <classpath mode="compile">lib/asm-3.1.jar;lib/jackson-core-asl-1.9.2.jar;lib/jackson-jaxrs-1.9.2.jar;lib/jackson-mapper-asl-1.9.2.jar;lib/jackson-xc-1.9.2.jar;lib/jconfig.jar;lib/jersey-client-1.16.jar;lib/jersey-core-1.16.jar;lib/jersey-json-1.16.jar;lib/jersey-server-1.16.jar;lib/jersey-servlet-1.16.jar;lib/jettison-1.1.jar;lib/jetty-6.1.0.jar;lib/jetty-util-6.1.0.jar;lib/jsr311-api-1.1.1.jar;lib/junit.jar;lib/log4j-1.2.15.jar;lib/servlet-api-2.5.jar;lib/gson-2.1.jar;lib/jedis-2.5.2.jar;lib/commons-pool2-2.0.jar;lib/ehcache-2.7.0.jar;lib/jgroups-3.2.5.Final.jar;lib/vcs.jar;lib/rabbitmq-client.jar;lib/commons-lang-2.4.jar;lib/rabbitmqlib-1.1.3.jar;lib/billingSBB-type.jar</classpath>
+                <source-level>1.7</source-level>
+            </compilation-unit>
+        </java-data>
+    </configuration>
+</project>
